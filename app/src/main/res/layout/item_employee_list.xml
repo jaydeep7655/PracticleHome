@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="vmObj"
+                type="com.example.practiclehome.viewmodel.ViewModelActivityMain"/>
+        <variable
+                name="itemObjEmployee"
+                type="com.example.practiclehome.model.ModelEmployee"/>
+        <variable
+                name="position"
+                type="Integer"/>
+    </data>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <LinearLayout
+                android:id="@+id/llEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v)->vmObj.onClickEvent(v.getId(), position,itemObjEmployee.id)}"
+                android:orientation="vertical">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="10dp"
+                      android:text='@{"ID : "+itemObjEmployee.id}'/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="10dp"
+                      android:text='@{"NAME : "+itemObjEmployee.employee_name}'/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="10dp"
+                      android:text='@{"SALARY : "+itemObjEmployee.employee_salary}'/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="10dp"
+                      android:text='@{"AGE : "+itemObjEmployee.employee_age}'/>
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</layout>

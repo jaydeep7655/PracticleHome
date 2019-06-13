@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PracticleHome</string>
+    <string name="message_no_connection">No Internet Connection</string>
+    <string name="title_user_list">Employee List</string>
+    <string name="general_error">Oops! There seems to be a problem. We\'re sorry but the server was unable to complete
+        your request. Please try again.
+    </string>
+    <string name="employee_detail_title">Employee Detail</string>
+</resources>
